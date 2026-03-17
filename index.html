@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>양찬용 - Backend Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky blue
+                        dark: '#0f172a',    // Slate 900
+                        card: '#1e293b',    // Slate 800
+                    },
+                    fontFamily: {
+                        sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body { font-family: 'Pretendard', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-padding { padding: 5rem 1.5rem; }
+    </style>
+</head>
+<body class="bg-dark text-slate-300 leading-relaxed selection:bg-primary selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="fixed w-full top-0 bg-dark/80 backdrop-blur-md z-50 border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-white tracking-wider">YANG<span class="text-primary">.DEV</span></div>
+            <nav class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                <a href="#education" class="hover:text-primary transition-colors">Education</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section (사진 & 소개) -->
+    <section id="about" class="pt-32 pb-20 px-6 max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+        <div class="flex-1 space-y-6">
+            <h2 class="text-primary font-semibold tracking-wide uppercase text-sm">Backend Developer</h2>
+            <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight">
+                안녕하세요, <br />
+                <span class="gradient-text">양찬용</span>입니다.
+            </h1>
+            <p class="text-lg text-slate-400">
+                "안정적인 인프라 구축과 레거시 시스템의 현대화를 이끄는 3년 차 백엔드 개발자입니다. 비즈니스 로직 최적화와 클라우드 환경으로의 마이그레이션 경험을 바탕으로, 확장이 용이하고 튼튼한 시스템 아키텍처를 만들어갑니다."
+            </p>
+            <div class="flex gap-4 pt-4 text-sm">
+                <a href="mailto:developer@email.com" class="flex items-center gap-2 bg-primary hover:bg-sky-600 text-white px-5 py-2.5 rounded-lg transition-colors font-medium">
+                    <i class="fa-solid fa-envelope"></i> Email Me
+                </a>
+                <a href="#" class="flex items-center gap-2 bg-card hover:bg-slate-700 text-white border border-slate-700 px-5 py-2.5 rounded-lg transition-colors font-medium">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+        <!-- 사진 영역 가이드 -->
+        <div class="w-32 h-32 md:w-48 md:h-48 shrink-0 rounded-full border-4 border-slate-800 overflow-hidden shadow-2xl relative bg-slate-800 flex items-center justify-center">
+            <!-- TODO: 아래 img 태그의 src에 실제 사진 URL을 넣어주세요 -->
+            <span class="text-slate-500 text-sm text-center px-4 absolute z-10">[정장 또는 비즈니스 캐주얼 프로필 사진]</span>
+            <img src="" alt="양찬용 프로필" class="w-full h-full object-cover opacity-20">
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="bg-card border-y border-slate-800">
+        <div class="max-w-5xl mx-auto px-6 py-12">
+            <h3 class="text-white font-bold text-xl mb-6 text-center">Tech Stack</h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+                <div class="space-y-2">
+                    <div class="text-primary text-2xl"><i class="fa-solid fa-code"></i></div>
+                    <div class="text-sm font-medium text-slate-300">Java, PHP, ASP, JS</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-primary text-2xl"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="text-sm font-medium text-slate-300">Spring, CodeIgniter, Express</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-primary text-2xl"><i class="fa-solid fa-database"></i></div>
+                    <div class="text-sm font-medium text-slate-300">MySQL, MSSQL, Redis</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-primary text-2xl"><i class="fa-brands fa-aws"></i></div>
+                    <div class="text-sm font-medium text-slate-300">AWS, Linux, GitLab CI/CD</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-primary text-2xl"><i class="fa-solid fa-robot"></i></div>
+                    <div class="text-sm font-medium text-slate-300">GitHub Copilot, Cursor</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience (경력 기술서 중점 영역) -->
+    <section id="experience" class="section-padding max-w-5xl mx-auto border-b border-slate-800">
+        <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-3">
+            <i class="fa-solid fa-briefcase text-primary"></i> Work Experience
+        </h2>
+
+        <div class="relative border-l-2 border-slate-800 ml-3 md:ml-0 pl-6 md:pl-8 space-y-16">
+            
+            <!-- 회사 정보 -->
+            <div class="relative">
+                <div class="absolute -left-[35px] md:-left-[41px] top-1 h-5 w-5 rounded-full border-4 border-dark bg-primary"></div>
+                <h3 class="text-2xl font-bold text-white">[현재 재직 중인 회사명 입력]</h3>
+                <p class="text-primary font-medium mt-1">백엔드 개발자 | 2023.12 ~ 현재</p>
+                
+                <div class="mt-8 space-y-12">
+                    
+                    <!-- 프로젝트 1 -->
+                    <div class="bg-card p-6 rounded-xl border border-slate-700/50 hover:border-slate-600 transition-colors">
+                        <h4 class="text-xl font-bold text-white mb-2">1. 대규모 서비스 리빌딩 및 클라우드 마이그레이션</h4>
+                        <p class="text-sm text-slate-400 mb-4">MBC 아카데미 뷰티 / 더조은</p>
+                        <p class="mb-4">기존 온프레미스(IDC) 환경에서 운영되던 레거시 웹사이트를 클라우드 환경으로 이관하고, 사용 기술을 현대화하여 서비스 안정성을 확보했습니다.</p>
+                        <ul class="list-disc list-inside space-y-2 text-slate-300">
+                            <li><strong class="text-white">언어 전환:</strong> Classic ASP로 작성된 기존 코드를 PHP 기반으로 전면 재작성하여 유지보수성 및 시스템 성능 향상</li>
+                            <li><strong class="text-white">인프라 이관:</strong> IDC 서버 환경을 AWS 인프라로 성공적으로 마이그레이션하여 트래픽 대응력 강화</li>
+                            <li><em class="text-slate-500 text-sm">[가이드] 트래픽 수용량 OO% 증가, 유지보수 공수 OO% 감소 등 수치화된 성과를 여기에 추가하세요.</em></li>
+                        </ul>
+                        
+                        <!-- 웹 화면용 모달 버튼 (인쇄 시 숨김) -->
+                        <button onclick="openModal('project1')" class="mt-5 text-sm text-primary hover:text-sky-400 font-semibold flex items-center gap-2 transition-colors print:hidden">
+                            자세히 보기 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <!-- PDF 인쇄용 상세 내용 (웹 화면에선 숨김, 인쇄 시 표시) -->
+                        <div class="hidden print:block mt-6 pt-4 border-t border-slate-600 text-sm space-y-3">
+                            <p><strong class="text-primary">도입 배경:</strong> 기존 IDC 환경의 노후화된 서버와 스케일아웃 불가능 문제 해결을 위해 AWS 및 최신 언어(PHP) 전환 결정.</p>
+                            <p><strong class="text-primary">트러블슈팅:</strong> 대용량 데이터 이관 중 타임아웃 발생 -> Chunk 단위 분할 비동기 처리 스크립트 작성 및 트랜잭션 로그 후속 동기화로 무중단 마이그레이션 완수.</p>
+                            <p><strong class="text-primary">회고:</strong> 데이터 이관 시 발생하는 엣지 케이스를 경험하며 데이터 정합성과 무중단 배포의 중요성을 깨달음.</p>
+                        </div>
+                    </div>
+
+                    <!-- 프로젝트 2 -->
+                    <div class="bg-card p-6 rounded-xl border border-slate-700/50 hover:border-slate-600 transition-colors">
+                        <h4 class="text-xl font-bold text-white mb-2">2. CI/CD 배포 자동화 파이프라인 구축</h4>
+                        <p class="mb-4">수동 배포로 인한 휴먼 에러를 방지하고, 개발팀의 생산성을 높이기 위한 자동화 환경을 구축했습니다.</p>
+                        <ul class="list-disc list-inside space-y-2 text-slate-300">
+                            <li><strong class="text-white">파이프라인 구축:</strong> GitLab CI/CD를 도입하여 소스코드 배포 자동화 시스템 고도화 완료</li>
+                            <li><strong class="text-white">무중단 배포:</strong> 배포 소요 시간을 단축하고, 무중단 서비스에 기여하는 안정적인 릴리즈 환경 조성</li>
+                            <li><em class="text-slate-500 text-sm">[가이드] 배포 소요 시간 OO분 -> OO분으로 단축 등 수치화된 성과를 여기에 추가하세요.</em></li>
+                        </ul>
+                        
+                        <!-- 웹 화면용 모달 버튼 (인쇄 시 숨김) -->
+                        <button onclick="openModal('project2')" class="mt-5 text-sm text-primary hover:text-sky-400 font-semibold flex items-center gap-2 transition-colors print:hidden">
+                            자세히 보기 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <!-- PDF 인쇄용 상세 내용 -->
+                        <div class="hidden print:block mt-6 pt-4 border-t border-slate-600 text-sm space-y-3">
+                            <p><strong class="text-primary">도입 배경:</strong> FTP 수동 배포로 인한 휴먼 에러를 방지하고자 GitLab CI/CD 도입.</p>
+                            <p><strong class="text-primary">트러블슈팅:</strong> Rsync 배포 과정에서 권한(Permission) 문제 발생 -> 배포 전용 시스템 계정 생성 및 SSH Key 기반 인증으로 보안 강화, 롤백 파이프라인 보완.</p>
+                            <p><strong class="text-primary">회고:</strong> 인프라와 배포 환경에 대한 이해도를 높이고 팀 전체의 생산성 향상에 기여함.</p>
+                        </div>
+                    </div>
+
+                    <!-- 프로젝트 3 -->
+                    <div class="bg-card p-6 rounded-xl border border-slate-700/50 hover:border-slate-600 transition-colors">
+                        <h4 class="text-xl font-bold text-white mb-2">3. 레거시 시스템 모던화 (Modernization)</h4>
+                        <p class="mb-4">사내 및 서비스 중인 레거시 시스템의 프레임워크 전환 및 아키텍처 개선을 수행했습니다.</p>
+                        <ul class="list-disc list-inside space-y-2 text-slate-300">
+                            <li><strong class="text-white">프레임워크 도입:</strong> 유지보수가 까다로운 Classic PHP 시스템을 CodeIgniter 프레임워크로 성공적으로 마이그레이션</li>
+                            <li><strong class="text-white">구조 개선:</strong> 코드 구조 개선 및 웹사이트 페이지 리뉴얼 작업을 주도하여 사용자 경험(UX) 개선</li>
+                        </ul>
+                        
+                        <!-- 웹 화면용 모달 버튼 (인쇄 시 숨김) -->
+                        <button onclick="openModal('project3')" class="mt-5 text-sm text-primary hover:text-sky-400 font-semibold flex items-center gap-2 transition-colors print:hidden">
+                            자세히 보기 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <!-- PDF 인쇄용 상세 내용 -->
+                        <div class="hidden print:block mt-6 pt-4 border-t border-slate-600 text-sm space-y-3">
+                            <p><strong class="text-primary">도입 배경:</strong> 절차지향적 코드로 인한 사이드 이펙트 방지를 위해 MVC 패턴을 강제하는 CodeIgniter 도입.</p>
+                            <p><strong class="text-primary">트러블슈팅:</strong> 무분별한 전역 변수 충돌 -> 의존성 주입(DI) 활용 및 싱글톤 패턴 클래스로 묶어 중앙 통제하도록 리팩토링.</p>
+                            <p><strong class="text-primary">회고:</strong> 기존 기능을 100% 보장하며 내부 구조를 개선하는 과정에서 테스트 코드의 중요성을 절감함.</p>
+                        </div>
+                    </div>
+
+                    <!-- 프로젝트 4 -->
+                    <div class="bg-card p-6 rounded-xl border border-slate-700/50 hover:border-slate-600 transition-colors">
+                        <h4 class="text-xl font-bold text-white mb-2">4. 공통 기능 모듈화 및 시스템 아키텍처 설계</h4>
+                        <p class="mb-4">파편화된 비즈니스 로직을 통합하고, 향후 확장성을 고려한 백엔드 구조를 설계했습니다.</p>
+                        <ul class="list-disc list-inside space-y-2 text-slate-300">
+                            <li><strong class="text-white">모듈화:</strong> 소셜 로그인, 고객 상담, 결제 연동 기능을 독립적인 모듈로 개발하여 타 프로젝트에서의 재사용성 100% 확보</li>
+                            <li><strong class="text-white">데이터 파이프라인:</strong> 마케팅 분석 시스템의 기반 데이터를 안정적으로 적재하고 가공하는 데이터 파이프라인 기초 구축</li>
+                        </ul>
+                        
+                        <!-- 웹 화면용 모달 버튼 (인쇄 시 숨김) -->
+                        <button onclick="openModal('project4')" class="mt-5 text-sm text-primary hover:text-sky-400 font-semibold flex items-center gap-2 transition-colors print:hidden">
+                            자세히 보기 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <!-- PDF 인쇄용 상세 내용 -->
+                        <div class="hidden print:block mt-6 pt-4 border-t border-slate-600 text-sm space-y-3">
+                            <p><strong class="text-primary">도입 배경:</strong> 신규 프로젝트마다 반복되는 개발 비효율 개선 및 유지보수 포인트 통합을 위해 핵심 로직 캡슐화.</p>
+                            <p><strong class="text-primary">트러블슈팅:</strong> 각 서비스별 결제 후처리 로직 상이 문제 -> 이벤트 기반(Event-Driven) 웹훅 구조로 설계하여 결제 모듈의 단일 책임을 유지하고 서비스별 구독 처리하도록 개선.</p>
+                            <p><strong class="text-primary">회고:</strong> 객체지향의 SRP(단일 책임 원칙)와 OCP(개방-폐쇄 원칙)의 중요성을 실무 레벨에서 깊이 이해함.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Side Projects -->
+    <section id="projects" class="section-padding max-w-5xl mx-auto border-b border-slate-800">
+        <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-3">
+            <i class="fa-solid fa-rocket text-primary"></i> Side Projects & Activities
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-card p-6 rounded-xl border border-slate-700/50 hover:-translate-y-1 transition-transform">
+                <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-cubes"></i></div>
+                <h3 class="text-xl font-bold text-white mb-3">건프라 리뷰 플랫폼</h3>
+                <p class="text-sm text-slate-400">RG, MG 등급 중심의 건프라 제작 기록, 리뷰, 보유 현황을 체계적으로 관리할 수 있는 개인화된 웹 서비스 기획 및 개발</p>
+            </div>
+            <div class="bg-card p-6 rounded-xl border border-slate-700/50 hover:-translate-y-1 transition-transform">
+                <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-server"></i></div>
+                <h3 class="text-xl font-bold text-white mb-3">Home Server 구축</h3>
+                <p class="text-sm text-slate-400">Intel i3-12100 기반 저전력 홈 NAS 구축. Linux 환경에서 게임(Palworld) 전용 서버 트래픽 및 운영 환경 최적화 수행</p>
+            </div>
+            <div class="bg-card p-6 rounded-xl border border-slate-700/50 hover:-translate-y-1 transition-transform">
+                <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-microchip"></i></div>
+                <h3 class="text-xl font-bold text-white mb-3">개인 AI 비서 'J.A.R.V.I.S'</h3>
+                <p class="text-sm text-slate-400">가정 내 서버 인프라와 IoT 기기를 연동하여 음성 및 데이터 기반으로 동작하는 개인화된 AI 비서 서비스 아키텍처 기획 중</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education (가이드 영역) -->
+    <section id="education" class="section-padding max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-3">
+            <i class="fa-solid fa-graduation-cap text-primary"></i> Education
+        </h2>
+        <div class="bg-card p-8 rounded-xl border border-slate-700/50">
+            <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
+                <h3 class="text-xl font-bold text-white">[대학교 이름 입력]</h3>
+                <span class="text-primary font-medium mt-2 md:mt-0">YYYY.MM ~ YYYY.MM</span>
+            </div>
+            <p class="text-lg text-slate-300 font-medium mb-3">[전공 이름 입력 (예: 컴퓨터공학과)]</p>
+            <ul class="list-disc list-inside space-y-2 text-sm text-slate-400">
+                <li>[졸업 작품 주제 또는 직무와 연관된 주요 수강 과목 내용 한 줄 요약]</li>
+                <li>[기타 교내 활동 내역 입력]</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-10 border-t border-slate-800 text-center">
+        <p class="text-slate-500 mb-4">© 2026 Yang Chan-yong. All rights reserved.</p>
+        <div class="flex justify-center gap-6 text-xl text-slate-400">
+            <a href="#" class="hover:text-primary transition-colors"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:developer@email.com" class="hover:text-primary transition-colors"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="hover:text-primary transition-colors"><i class="fa-solid fa-link"></i></a>
+        </div>
+    </footer>
+
+    <!-- 상세 보기 모달 (Modal) -->
+    <div id="projectModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-card w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-700 shadow-2xl transform scale-95 transition-all duration-300" id="modalContent">
+            <!-- Header -->
+            <div class="sticky top-0 bg-card/95 backdrop-blur z-10 border-b border-slate-700 px-6 py-4 flex justify-between items-center">
+                <h3 id="modalTitle" class="text-xl font-bold text-white">프로젝트 제목</h3>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white transition-colors">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+            <!-- Body -->
+            <div class="p-6 md:p-8 space-y-8">
+                <div>
+                    <h4 class="text-primary font-bold flex items-center gap-2 mb-3 text-lg"><i class="fa-solid fa-lightbulb"></i> 기술 도입 배경 및 이유</h4>
+                    <p id="modalReason" class="text-slate-300 leading-relaxed"></p>
+                </div>
+                <div>
+                    <h4 class="text-primary font-bold flex items-center gap-2 mb-3 text-lg"><i class="fa-solid fa-timeline"></i> 작업 프로세스 및 타임라인</h4>
+                    <p id="modalProcess" class="text-slate-300 leading-relaxed"></p>
+                </div>
+                <div>
+                    <h4 class="text-primary font-bold flex items-center gap-2 mb-3 text-lg"><i class="fa-solid fa-wrench"></i> 핵심 트러블슈팅</h4>
+                    <div id="modalTrouble" class="bg-dark p-5 rounded-xl border border-slate-800 text-slate-300 leading-relaxed text-sm"></div>
+                </div>
+                <div>
+                    <h4 class="text-primary font-bold flex items-center gap-2 mb-3 text-lg"><i class="fa-solid fa-seedling"></i> 회고 및 느낀점</h4>
+                    <p id="modalLesson" class="text-slate-300 leading-relaxed"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 모달 스크립트 -->
+    <script>
+        const projectData = {
+            'project1': {
+                title: '대규모 서비스 리빌딩 및 클라우드 마이그레이션',
+                reason: '기존 IDC 환경의 노후화된 서버와 Classic ASP 기반의 레거시 코드는 스케일아웃이 불가능하여 급증하는 트래픽을 감당하기 어려웠습니다. 이에 유연한 확장성을 보장하는 AWS 클라우드 환경과 유지보수가 용이한 최신 언어(PHP)로의 전환을 결정했습니다.',
+                process: '• 1단계: 기존 비즈니스 로직 분석 및 DB 스키마 병목 지점 파악<br>• 2단계: PHP 기반 백엔드 API 신규 개발 및 AWS 인프라(EC2, RDS) 프로비저닝<br>• 3단계: 스테이징 환경 부하 테스트 및 무중단 데이터 마이그레이션 진행',
+                trouble: '<strong>[이슈]</strong> IDC 데이터베이스에서 AWS RDS로 대용량 데이터를 이관하는 과정에서 잦은 타임아웃 발생<br><br><strong>[해결]</strong> 데이터를 묶음(Chunk) 단위로 분할하여 비동기 처리하는 마이그레이션 스크립트를 자체 작성했습니다. 또한 이관 중 발생하는 신규 트랜잭션 로그를 별도 테이블에 적재 후 후속 동기화하는 방식으로 무중단/손실 없는 마이그레이션을 성공적으로 완수했습니다.',
+                lesson: '단순한 코드 변환을 넘어 시스템의 근본적인 병목 지점을 파악하고 아키텍처를 재설계하는 시야를 가질 수 있었습니다. 특히 대용량 데이터 이관 시 발생할 수 있는 엣지 케이스를 직접 경험하며 데이터 정합성과 무중단 배포의 중요성을 깊이 깨달았습니다.'
+            },
+            'project2': {
+                title: 'CI/CD 배포 자동화 파이프라인 구축',
+                reason: '과거 FTP를 이용한 수동 배포 방식으로 인해 버전 충돌이나 파일 누락 등 휴먼 에러가 빈번하게 발생했습니다. 이를 해결하고 개발 본연의 업무에 집중할 수 있는 환경을 만들고자 GitLab CI/CD 파이프라인 도입을 주도했습니다.',
+                process: '• 현행 배포 프로세스 문제점 리포트 작성 및 도입 기안<br>• GitLab Runner 서버 구성 및 파이프라인 스크립트(.gitlab-ci.yml) 작성<br>• 테스트 서버 우선 적용 후 안정성 검증, 이후 프로덕션 서버로 확대 적용',
+                trouble: '<strong>[이슈]</strong> 빌드 및 테스트 과정은 성공했으나, 타겟 서버로 소스를 Rsync 하는 과정에서 권한(Permission) 문제로 배포 실패 발생<br><br><strong>[해결]</strong> 배포 전용 시스템 계정을 생성하고 SSH Key 기반의 인증을 구성하여 보안을 강화했습니다. 또한 배포 실패 시 자동으로 이전 버전으로 롤백(Rollback) 되도록 파이프라인 스크립트를 보완하여 장애 시간을 최소화했습니다.',
+                lesson: 'DevOps의 기본 개념을 실무에 직접 적용해 볼 수 있었던 소중한 경험이었습니다. 자동화가 가져다주는 개발팀 전체의 생산성 향상을 직접 눈으로 확인하며, 백엔드 개발자로서 인프라와 배포 환경까지 이해하는 것이 얼마나 중요한지 깨달았습니다.'
+            },
+            'project3': {
+                title: '레거시 시스템 모던화 (Modernization)',
+                reason: '객체 지향적이지 않은 절차지향적 코드로 인해 기능 하나를 추가할 때마다 사이드 이펙트가 발생했습니다. 코드의 결합도를 낮추고 팀 단위 협업이 가능하도록 MVC 패턴을 강제하는 CodeIgniter 프레임워크 도입을 결정했습니다.',
+                process: '• 사내 시스템 내 가장 의존성이 낮은 독립된 기능부터 점진적 전환(Strangler Fig 패턴 적용)<br>• 라우팅 구조 전면 개편 및 공통 컨트롤러/모델 분리<br>• 프론트엔드와 백엔드를 분리하기 위한 RESTful API 설계 도입',
+                trouble: '<strong>[이슈]</strong> 기존에 무분별하게 사용되던 전역 변수(Global Variables)들이 프레임워크 환경에서 충돌을 일으킴<br><br><strong>[해결]</strong> 의존성 주입(Dependency Injection) 개념을 활용하여 전역 변수들을 싱글톤 패턴의 클래스로 묶어 관리하도록 리팩토링했습니다. 이 과정을 통해 흩어져 있던 설정 값들을 한 곳에서 중앙 통제할 수 있게 되었습니다.',
+                lesson: '기술 부채(Technical Debt)를 상환하는 과정이 신규 개발보다 훨씬 더 정교한 설계와 끈기를 요구한다는 것을 배웠습니다. 기존 기능의 동작을 100% 보장하면서 내부 구조만 갈아끼우는 경험을 통해 테스트 코드의 필요성을 절감했습니다.'
+            },
+            'project4': {
+                title: '공통 기능 모듈화 및 시스템 아키텍처 설계',
+                reason: '새로운 프로젝트가 시작될 때마다 로그인, 결제 등 유사한 기능을 반복해서 개발하는 비효율이 있었습니다. 유지보수 포인트를 하나로 통합하고 개발 속도를 높이기 위해 핵심 비즈니스 로직을 독립적인 모듈로 캡슐화하고자 했습니다.',
+                process: '• 여러 서비스에서 공통으로 사용되는 기능 도출 및 인터페이스 명세서 작성<br>• 외부 API(결제사, 소셜 로그인 등) 연동부를 인터페이스로 추상화하여 구현<br>• 사내 비공개 패키지 저장소를 구축하여 모듈 버전 관리 시작',
+                trouble: '<strong>[이슈]</strong> 결제 모듈을 여러 서비스에 연동하는 과정에서, 각 서비스마다 요구하는 결제 완료 후의 후처리 로직이 달라 모듈이 무거워지는 현상 발생<br><br><strong>[해결]</strong> 결제 모듈은 순수하게 \'결제 승인/실패\' 기능만 담당하도록 책임을 분리하고, 이벤트 기반 아키텍처(Event-Driven)를 모방하여 결제 완료 시 Webhook을 발생시키도록 설계했습니다. 각 서비스는 해당 이벤트를 구독하여 자체적인 후처리 로직을 실행하도록 개선했습니다.',
+                lesson: '객체지향의 SOLID 원칙 중 단일 책임 원칙(SRP)과 개방-폐쇄 원칙(OCP)의 중요성을 실무 레벨에서 깊이 이해하게 되었습니다. 확장성을 고려한 초기 설계가 추후 얼마나 큰 비용 절감을 가져오는지 체감할 수 있었습니다.'
+            }
+        };
+
+        const modalEl = document.getElementById('projectModal');
+        const modalContentEl = document.getElementById('modalContent');
+
+        function openModal(projectId) {
+            const data = projectData[projectId];
+            if (!data) return;
+
+            // 데이터 채우기
+            document.getElementById('modalTitle').innerText = data.title;
+            document.getElementById('modalReason').innerHTML = data.reason;
+            document.getElementById('modalProcess').innerHTML = data.process;
+            document.getElementById('modalTrouble').innerHTML = data.trouble;
+            document.getElementById('modalLesson').innerHTML = data.lesson;
+
+            // 모달 열기 애니메이션
+            modalEl.classList.remove('hidden');
+            modalEl.classList.add('flex');
+            // setTimeout을 주어 display:flex 적용 후 opacity 트랜지션이 먹히도록 함
+            setTimeout(() => {
+                modalEl.classList.remove('opacity-0');
+                modalEl.classList.add('opacity-100');
+                modalContentEl.classList.remove('scale-95');
+                modalContentEl.classList.add('scale-100');
+            }, 10);
+            
+            // 배경 스크롤 방지
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            // 모달 닫기 애니메이션
+            modalEl.classList.remove('opacity-100');
+            modalEl.classList.add('opacity-0');
+            modalContentEl.classList.remove('scale-100');
+            modalContentEl.classList.add('scale-95');
+
+            // 트랜지션이 끝난 후 hidden 처리
+            setTimeout(() => {
+                modalEl.classList.add('hidden');
+                modalEl.classList.remove('flex');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // 모달 바깥 배경 클릭 시 닫기
+        modalEl.addEventListener('click', function(e) {
+            if (e.target === modalEl) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

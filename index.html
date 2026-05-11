@@ -6,10 +6,10 @@
     <title>[양찬용] 레거시 현대화와 CI/CD에 강한 백엔드 개발자</title>
     
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:url" content="https://www.chanyongyang.com/">
     <meta property="og:title" content="[양찬용] 레거시 현대화와 CI/CD에 강한 백엔드 개발자">
     <meta property="og:description" content="안정적인 인프라 구축과 레거시 시스템의 현대화를 이끄는 4년 차 백엔드 개발자입니다.">
-    <meta property="og:image" content="https://your-domain.com/og_image.png">
+    <meta property="og:image" content="https://www.chanyongyang.com/og_image.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -38,6 +38,103 @@
             -webkit-text-fill-color: transparent;
         }
         .section-padding { padding: 5rem 1.5rem; }
+
+        /* PDF 인쇄용 스타일 — 라이트 테마 강제, 모달 내용 인라인 표시 */
+        .print-only { display: none; }
+
+        @media print {
+            @page { margin: 1.2cm; size: A4; }
+
+            *, *::before, *::after {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                box-shadow: none !important;
+            }
+
+            html, body {
+                background: #ffffff !important;
+                color: #1e293b !important;
+                font-size: 10.5pt;
+                line-height: 1.5;
+            }
+
+            /* 화면 전용 요소 숨김 */
+            header,
+            #projectModal,
+            .print\:hidden,
+            nav {
+                display: none !important;
+            }
+
+            /* About 섹션 상단 여백 제거(고정 헤더 안 보이므로) */
+            #about { padding-top: 2rem !important; }
+
+            /* 다크 배경 → 흰 배경 */
+            .bg-dark, .bg-card, .bg-slate-950, .bg-dark\/50, .bg-dark\/80 {
+                background: #ffffff !important;
+            }
+
+            /* 뱃지 배경(slate-800) → 연한 회색으로 변환 */
+            .bg-slate-800 {
+                background: #f1f5f9 !important;
+                color: #1e293b !important;
+            }
+
+            /* 텍스트 → 다크 슬레이트 */
+            .text-white, .text-slate-200, .text-slate-300, .text-slate-400 {
+                color: #1e293b !important;
+            }
+            .text-slate-500 { color: #475569 !important; }
+
+            /* 강조 컬러는 진한 에메랄드로 (가독성) */
+            .text-primary { color: #047857 !important; }
+            .bg-primary,
+            .bg-primary\/10,
+            .bg-primary\/20 {
+                background: #d1fae5 !important;
+                color: #047857 !important;
+            }
+
+            /* 보더 가독성 확보 */
+            .border-slate-700\/50,
+            .border-slate-700,
+            .border-slate-800,
+            .border-primary\/30 {
+                border-color: #cbd5e1 !important;
+            }
+
+            /* 그래디언트 텍스트 폴백 */
+            .gradient-text {
+                background: none !important;
+                -webkit-text-fill-color: #047857 !important;
+                color: #047857 !important;
+            }
+
+            /* 페이지 분기 제어 */
+            section { page-break-inside: auto; }
+            .bg-card, [class*="rounded-xl"] {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            h1, h2, h3, h4 { page-break-after: avoid; break-after: avoid; }
+
+            /* 섹션 패딩 축소 */
+            .section-padding { padding: 1.5rem 0 !important; }
+            section { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+
+            /* 링크는 밑줄 제거 */
+            a { color: inherit !important; text-decoration: none !important; }
+
+            /* 인쇄 전용 모달 상세 내용 표시 */
+            .print-only { display: block !important; }
+
+            /* 폰트 크기 조정 */
+            h1 { font-size: 22pt !important; }
+            h2 { font-size: 16pt !important; }
+            h3 { font-size: 13pt !important; }
+            h4 { font-size: 11.5pt !important; }
+        }
     </style>
 </head>
 <body class="bg-dark text-slate-300 leading-relaxed selection:bg-primary selection:text-white">
@@ -64,12 +161,12 @@
                 <span class="gradient-text">양찬용</span> 입니다.
             </h1>
             <p class="text-lg md:text-xl text-slate-400 leading-relaxed mt-4">
-                문제 해결과 시스템 자동화를 통해 비즈니스의 가치를 높이는 3년 차 백엔드 개발자입니다.<br>
-                노후화된 레거시 시스템을 현대적 프레임워크와 클라우드 환경으로 전면 개편하여 병목 현상을 해결했으며,<br>
-                <strong class="text-slate-200 font-semibold">CI/CD 고도화와 데이터 파이프라인 구축을 통해 개발팀의 생산성을 극대화</strong>하고 있습니다.
+                문제 해결과 시스템 자동화로 비즈니스 가치를 높이는 백엔드 개발자입니다.<br>
+                레거시 시스템을 현대적 프레임워크·클라우드로 전면 개편하고 CI/CD를 고도화해 개발팀의 생산성을 극대화했으며,<br>
+                최근에는 <strong class="text-slate-200 font-semibold">Claude Code 기반 AI 페어 프로그래밍과 하네스 엔지니어링을 실증</strong>하며 AI 시대 백엔드 개발의 새로운 표준을 정립해가고 있습니다.
             </p>
             <div class="flex flex-wrap gap-4 pt-6 text-sm justify-center md:justify-start">
-                <a href="mailto:cksdydsla93@email.com" class="flex items-center gap-2 bg-primary hover:bg-emerald-600 text-white px-7 py-3.5 rounded-lg transition-colors font-bold shadow-sm">
+                <a href="mailto:cksdydsla93@gmail.com" class="flex items-center gap-2 bg-primary hover:bg-emerald-600 text-white px-7 py-3.5 rounded-lg transition-colors font-bold shadow-sm">
                     <i class="fa-solid fa-envelope"></i> Email Me
                 </a>
                 <a href="https://github.com/yangchanyong" class="flex items-center gap-2 bg-card hover:bg-slate-700 text-white border border-slate-700 px-7 py-3.5 rounded-lg transition-colors font-bold shadow-sm" target="_blank">
@@ -82,7 +179,7 @@
     <section class="bg-card border-y border-slate-800 shadow-sm mt-4">
         <div class="max-w-7xl mx-auto px-6 py-8">
             <h3 class="text-white font-bold text-xl mb-6 text-center">Core Tech Stack</h3>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
                 <div class="space-y-2">
                     <div class="text-primary text-2xl"><i class="fa-solid fa-code"></i></div>
                     <div class="text-sm font-semibold text-slate-300">Java, PHP, JavaScript</div>
@@ -97,11 +194,15 @@
                 </div>
                 <div class="space-y-2">
                     <div class="text-primary text-2xl"><i class="fa-brands fa-aws"></i></div>
-                    <div class="text-sm font-semibold text-slate-300">AWS (EC2, S3), Linux</div>
+                    <div class="text-sm font-semibold text-slate-300">AWS (EC2, S3, Aurora), Linux</div>
                 </div>
                 <div class="space-y-2">
                     <div class="text-primary text-2xl"><i class="fa-solid fa-rocket"></i></div>
-                    <div class="text-sm font-semibold text-slate-300">GitLab CI/CD, Jenkins</div>
+                    <div class="text-sm font-semibold text-slate-300">GitHub Actions, GitLab CI/CD, Jenkins</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-primary text-2xl"><i class="fa-solid fa-robot"></i></div>
+                    <div class="text-sm font-semibold text-slate-300">Claude Code, Cursor</div>
                 </div>
             </div>
         </div>
@@ -131,6 +232,26 @@
                             <li><strong class="text-white">인프라 이관:</strong> 기존 온프레미스(IDC) 파일 서버의 방대한 데이터를 AWS S3 객체 스토리지로 안전하게 이전</li>
                         </ul>
                         <button onclick="openModal('project1')" class="mt-5 text-sm text-primary hover:text-emerald-400 font-bold flex items-center gap-2 transition-colors print:hidden">자세히 보기 <i class="fa-solid fa-arrow-right"></i></button>
+                        <div class="print-only mt-5 pt-5 border-t border-slate-200 space-y-4 text-sm">
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">💡 프로젝트 배경</h5>
+                                <p>기존 계열사(뷰티, IT)의 웹 서비스가 노후화된 Classic ASP로 구동되고 있어 개발자 간 동시 작업이 불가하고 확장에 한계가 있었습니다. 이를 해결하기 위해 MVC 패턴을 강제하는 CodeIgniter(PHP) 기반으로 아키텍처 전면 개편을 진행했습니다.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">📋 주요 수행 내역</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>절차지향적 ASP 코드를 MVC 구조로 재설계하여 프론트/백엔드 관심사 분리</li>
+                                    <li>기존 하드코딩된 SQL을 프레임워크 쿼리 빌더 기반으로 현대화</li>
+                                    <li>MSSQL 프로시저를 MySQL 쿼리로 변환 및 인덱스 최적화</li>
+                                    <li>IDC 기반의 로컬 파일 서버 데이터를 AWS S3 객체 스토리지로 마이그레이션</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">🔧 트러블슈팅 및 성과</h5>
+                                <p><strong>[이슈]</strong> 레거시 환경에서 무분별하게 사용되던 전역 변수(Global Variables)들이 프레임워크 이관 후 심각한 충돌을 일으켰습니다.</p>
+                                <p class="mt-2"><strong>[해결]</strong> 의존성 주입(DI) 개념을 활용하여 전역 설정값들을 싱글톤 패턴의 클래스로 묶어 한 곳에서 중앙 통제할 수 있도록 리팩토링했습니다. 이 과정을 통해 시스템 전반의 유지보수성을 극적으로 향상시켰습니다.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="bg-card p-6 rounded-xl border border-slate-700/50 hover:shadow-lg hover:border-slate-500 transition-all">
@@ -142,6 +263,25 @@
                             <li><strong class="text-white">성과:</strong> 기존 최대 3분 소요되던 배포 시간을 10~12초로 획기적으로 단축하여 팀 생산성 극대화</li>
                         </ul>
                         <button onclick="openModal('project2')" class="mt-5 text-sm text-primary hover:text-emerald-400 font-bold flex items-center gap-2 transition-colors print:hidden">자세히 보기 <i class="fa-solid fa-arrow-right"></i></button>
+                        <div class="print-only mt-5 pt-5 border-t border-slate-200 space-y-4 text-sm">
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">💡 프로젝트 배경</h5>
+                                <p>개발 및 실무 서버 모두 Jenkins 단일 배포 환경을 사용하여 개발 서버 배포 시 피드백 루프가 크게 지연(약 3분 소요)되었습니다. 애자일한 개발 환경 조성을 위해 GitLab CI/CD 환경을 선제적으로 도입했습니다.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">📋 주요 수행 내역</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>기존 Jenkins 빌드 스크립트 분석 및 .gitlab-ci.yml 마이그레이션</li>
+                                    <li>리스크 방지를 위해 개발서버(GitLab CI)와 실서버(Jenkins)를 분리하는 투트랙 운영 전략 수립</li>
+                                    <li>GitLab Runner 서버 구성 및 파이프라인 캐싱 최적화 적용</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">🔧 트러블슈팅 및 성과</h5>
+                                <p><strong>[이슈]</strong> 파이프라인 적용 초기, 매 빌드마다 의존성 라이브러리를 새로 다운로드하여 기존 젠킨스보다 배포 속도가 느려지는 병목이 발생했습니다.</p>
+                                <p class="mt-2"><strong>[해결]</strong> GitLab CI의 cache 및 artifacts 기능을 적극 활용하여 패키지를 재사용하도록 구성하고, 변경된 파일만 감지하여 배포하는 스크립트를 작성했습니다. 그 결과 배포 소요 시간을 3분에서 10초 내외로 획기적으로 단축시켰습니다.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="bg-card p-6 rounded-xl border border-slate-700/50 hover:shadow-lg hover:border-slate-500 transition-all">
@@ -153,6 +293,25 @@
                             <li><strong class="text-white">성과:</strong> 수작업으로 진행되던 데이터 가공 및 등록 리소스를 대폭 절감하여 업무 효율성 증대</li>
                         </ul>
                         <button onclick="openModal('project3')" class="mt-5 text-sm text-primary hover:text-emerald-400 font-bold flex items-center gap-2 transition-colors print:hidden">자세히 보기 <i class="fa-solid fa-arrow-right"></i></button>
+                        <div class="print-only mt-5 pt-5 border-t border-slate-200 space-y-4 text-sm">
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">💡 프로젝트 배경</h5>
+                                <p>사내 마케팅 부서에서 광고 성과(ROAS, ROI)를 측정할 수 있는 시스템이 부재했으며, 수강생 상담 데이터 역시 수작업으로 입력해야 하는 비효율이 발생하고 있었습니다.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">📋 주요 수행 내역</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Meta, Google 등 글로벌 광고 플랫폼 API 문서 분석 및 연동 아키텍처 설계</li>
+                                    <li>각 플랫폼의 데이터를 수집, 가공하여 사내 DB에 적재하는 자동화 파이프라인 구축</li>
+                                    <li>마케팅 성과를 시각적으로 확인할 수 있는 전용 분석 페이지(백오피스) 신규 개발</li>
+                                    <li>Meta 수강생 신청 데이터 API 연동 및 엑셀 대량 업로드 시스템 개발</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">🔧 트러블슈팅 및 성과</h5>
+                                <p><strong>[성과]</strong> 외부 API 연동을 통한 데이터 수집 자동화로 마케팅 성과 분석의 정확도와 속도를 높였습니다. 또한, 기존에 담당자가 일일이 수작업으로 등록해야 했던 방대한 수강생 신청 데이터를 엑셀 대량 업로드 기능으로 대체하여 사내 업무 효율성을 극대화했습니다.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="bg-card p-6 rounded-xl border border-slate-700/50 hover:shadow-lg hover:border-slate-500 transition-all">
@@ -164,6 +323,24 @@
                             <li><strong class="text-white">아키텍처 개선:</strong> 통합되어 있던 사업부별 인트라넷을 분리 구축하고 숏폼 영상 관리자 기능 도입</li>
                         </ul>
                         <button onclick="openModal('project4')" class="mt-5 text-sm text-primary hover:text-emerald-400 font-bold flex items-center gap-2 transition-colors print:hidden">자세히 보기 <i class="fa-solid fa-arrow-right"></i></button>
+                        <div class="print-only mt-5 pt-5 border-t border-slate-200 space-y-4 text-sm">
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">💡 프로젝트 배경</h5>
+                                <p>신규 프로모션 및 페이지 개발 시 반복되는 인증, 결제 로직에 의한 리소스 낭비를 막고, 레거시 PHP 환경에서 발견된 보안 취약점(SQL Injection, XSS)을 근본적으로 차단해야 했습니다.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">📋 주요 수행 내역</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>OAuth 2.0 (네이버, 카카오, 페이스북) 기반 통합 사용자 인증 모듈 신규 개발</li>
+                                    <li>전역 파라미터 필터링 함수(param_get_post) 구현 및 수백 개의 레거시 파일에 일괄 적용</li>
+                                    <li>기존 통합 운영되던 사업부별(IT, 뷰티) 인트라넷을 논리적/물리적으로 분리 구축</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">🔧 트러블슈팅 및 성과</h5>
+                                <p><strong>[성과 및 트러블슈팅]</strong> 레거시 환경에서 파라미터를 받는 방식($_GET, $_POST)을 전면 분석하여, 직접적인 SQL 조작어 차단 및 특수기호 유니코드 치환 로직이 담긴 보안 함수를 직접 개발했습니다. 이를 4개의 주요 프로젝트, 수백 개의 파일에 적용하여 SQL Injection과 XSS 공격을 성공적으로 방어했습니다.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="bg-dark/50 p-6 rounded-xl border border-slate-800 border-dashed text-slate-400 text-sm leading-relaxed">
@@ -187,24 +364,35 @@
             <div class="flex-1">
                 <h3 class="text-2xl font-bold text-white mb-3">AI 페어 프로그래밍 기반 백엔드 개발 워크플로우 실증</h3>
                 <p class="text-slate-300 leading-relaxed mb-5">
-                    Claude Code를 활용한 AI 페어 프로그래밍과 하네스 엔지니어링(AI 협업 환경 설계)을 실증한 Spring Boot 백엔드 프로젝트입니다. 
-                    Plan Mode 기반 설계 합의, 보안·트랜잭션 코드 사람 검토 게이트, 단계별 협업 로그 작성을 통해 
-                    <strong class="text-white">AI 생성 코드를 비판적으로 검증·통합하는 워크플로우</strong>를 정립했습니다. 
-                    CI/CD를 1단계부터 적용하여 AI 코드 자동 검증 파이프라인을 구축했으며, 
-                    개인 컬렉션 관리 시스템을 도메인 사례로 REST API 설계부터 AWS 배포까지 풀사이클을 진행했습니다.
+                    Claude Code를 활용한 AI 페어 프로그래밍과 하네스 엔지니어링(AI 협업 환경 설계)을 실증한 Spring Boot 백엔드 프로젝트입니다.
+                    Plan Mode 기반 설계 합의, 보안·트랜잭션 코드 사람 검토 게이트, 단계별 협업 로그 작성을 통해
+                    <strong class="text-white">AI 생성 코드를 비판적으로 검증·통합하는 워크플로우</strong>를 정립했습니다.
+                    건프라 컬렉션 관리 도메인을 사례로 <strong class="text-white">OAuth2(Google/Kakao/Naver) + JWT 인증, S3 Presigned URL 이미지 업로드, QueryDSL 동적 검색, Bucket4j Rate Limiting</strong>을 구현하고,
+                    <strong class="text-white">AWS EC2 + Aurora + Cloudflare</strong> 운영 환경에 GitHub Actions CI/CD로 자동 배포까지 풀사이클을 완성했습니다.
                 </p>
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-2 mb-5">
                     <span class="bg-primary/10 text-primary px-3 py-1 text-sm rounded-md border border-primary/30 font-medium">Claude Code</span>
                     <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Java 17</span>
-                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Spring Boot</span>
-                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">MySQL</span>
-                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">AWS</span>
+                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Spring Boot 3.5</span>
+                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">JPA + QueryDSL</span>
+                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">OAuth2 + JWT</span>
+                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">AWS Aurora</span>
+                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">AWS S3</span>
+                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Docker</span>
+                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Cloudflare</span>
                     <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">GitHub Actions</span>
+                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Swagger</span>
                 </div>
-                <a href="https://github.com/yangchanyong/project_V" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 mt-4 text-sm text-primary hover:underline">
-                    <i class="fa-brands fa-github"></i> GitHub에서 협업 로그 보기
-                </a>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://vibe.chanyongyang.com" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-sm text-primary hover:underline font-medium">
+                        <i class="fa-solid fa-globe"></i> Live Demo (Swagger UI)
+                    </a>
+                    <a href="https://github.com/yangchanyong/project_V" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-sm text-primary hover:underline">
+                        <i class="fa-brands fa-github"></i> GitHub에서 협업 로그 보기
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -250,7 +438,7 @@
         <p class="text-slate-500 mb-4 text-sm">© 2026 Yang Chan-yong. All rights reserved.</p>
         <div class="flex justify-center gap-6 text-xl text-slate-400">
             <a href="https://github.com/yangchanyong" class="hover:text-primary transition-colors" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:cksdydsla93@email.com" class="hover:text-primary transition-colors"><i class="fa-solid fa-envelope"></i></a>
+            <a href="mailto:cksdydsla93@gmail.com" class="hover:text-primary transition-colors"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </footer>
 

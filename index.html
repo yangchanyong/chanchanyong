@@ -357,41 +357,120 @@
         <h2 class="text-3xl font-bold text-white mb-10 flex items-center gap-3">
             <i class="fa-solid fa-rocket text-primary"></i> Personal Projects
         </h2>
-        <div class="bg-card p-8 rounded-xl border border-slate-700/50 shadow-sm hover:border-slate-500 transition-all flex flex-col md:flex-row gap-8 items-start md:items-center">
-            <div class="text-primary text-5xl md:text-6xl bg-dark p-8 rounded-2xl border border-slate-800 shrink-0 flex items-center justify-center">
-                <i class="fa-solid fa-code-pull-request"></i>
-            </div>
-            <div class="flex-1">
-                <h3 class="text-2xl font-bold text-white mb-3">AI 페어 프로그래밍 기반 백엔드 개발 워크플로우 실증</h3>
-                <p class="text-slate-300 leading-relaxed mb-5">
-                    Claude Code를 활용한 AI 페어 프로그래밍과 하네스 엔지니어링(AI 협업 환경 설계)을 실증한 Spring Boot 백엔드 프로젝트입니다.
-                    Plan Mode 기반 설계 합의, 보안·트랜잭션 코드 사람 검토 게이트, 단계별 협업 로그 작성을 통해
-                    <strong class="text-white">AI 생성 코드를 비판적으로 검증·통합하는 워크플로우</strong>를 정립했습니다.
-                    건프라 컬렉션 관리 도메인을 사례로 <strong class="text-white">OAuth2(Google/Kakao/Naver) + JWT 인증, S3 Presigned URL 이미지 업로드, QueryDSL 동적 검색, Bucket4j Rate Limiting</strong>을 구현하고,
-                    <strong class="text-white">AWS EC2 + Aurora + Cloudflare</strong> 운영 환경에 GitHub Actions CI/CD로 자동 배포까지 풀사이클을 완성했습니다.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-5">
-                    <span class="bg-primary/10 text-primary px-3 py-1 text-sm rounded-md border border-primary/30 font-medium">Claude Code</span>
-                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Java 17</span>
-                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Spring Boot 3.5</span>
-                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">JPA + QueryDSL</span>
-                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">OAuth2 + JWT</span>
-                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">AWS Aurora</span>
-                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">AWS S3</span>
-                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Docker</span>
-                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Cloudflare</span>
-                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">GitHub Actions</span>
-                    <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Swagger</span>
+
+        <div class="space-y-8">
+            <div class="bg-card p-8 rounded-xl border border-slate-700/50 shadow-sm hover:border-slate-500 transition-all flex flex-col md:flex-row gap-8 items-start md:items-center">
+                <div class="text-primary text-5xl md:text-6xl bg-dark p-8 rounded-2xl border border-slate-800 shrink-0 flex items-center justify-center">
+                    <i class="fa-solid fa-code-pull-request"></i>
                 </div>
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://vibe.chanyongyang.com" target="_blank" rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 text-sm text-primary hover:underline font-medium">
-                        <i class="fa-solid fa-globe"></i> Live Demo (Swagger UI)
-                    </a>
-                    <a href="https://github.com/yangchanyong/project_V" target="_blank" rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 text-sm text-primary hover:underline">
-                        <i class="fa-brands fa-github"></i> GitHub에서 협업 로그 보기
-                    </a>
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-white mb-3">AI 페어 프로그래밍 기반 백엔드 개발 워크플로우 실증</h3>
+                    <p class="text-slate-300 leading-relaxed mb-5">
+                        Claude Code를 활용한 AI 페어 프로그래밍과 하네스 엔지니어링(AI 협업 환경 설계)을 실증한 Spring Boot 백엔드 프로젝트입니다.
+                        Plan Mode 기반 설계 합의, 보안·트랜잭션 코드 사람 검토 게이트, 단계별 협업 로그 작성을 통해
+                        <strong class="text-white">AI 생성 코드를 비판적으로 검증·통합하는 워크플로우</strong>를 정립했습니다.
+                        건프라 컬렉션 관리 도메인을 사례로 <strong class="text-white">OAuth2(Google/Kakao/Naver) + JWT 인증, S3 Presigned URL 이미지 업로드, QueryDSL 동적 검색, Bucket4j Rate Limiting</strong>을 구현하고,
+                        <strong class="text-white">AWS EC2 + Aurora + Cloudflare</strong> 운영 환경에 GitHub Actions CI/CD로 자동 배포까지 풀사이클을 완성했습니다.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="bg-primary/10 text-primary px-3 py-1 text-sm rounded-md border border-primary/30 font-medium">Claude Code</span>
+                        <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Java 17</span>
+                        <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Spring Boot 3.5</span>
+                        <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">JPA + QueryDSL</span>
+                        <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">OAuth2 + JWT</span>
+                        <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">AWS Aurora</span>
+                        <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">AWS S3</span>
+                        <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Docker</span>
+                        <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Cloudflare</span>
+                        <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">GitHub Actions</span>
+                        <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Swagger</span>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://vibe.chanyongyang.com" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 text-sm text-primary hover:underline font-medium">
+                            <i class="fa-solid fa-globe"></i> Live Demo (Swagger UI)
+                        </a>
+                        <a href="https://github.com/yangchanyong/project_V" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 text-sm text-primary hover:underline">
+                            <i class="fa-brands fa-github"></i> GitHub에서 협업 로그 보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-card p-8 rounded-xl border border-slate-700/50 shadow-sm hover:border-slate-500 transition-all relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-primary/20 text-primary text-xs font-bold px-4 py-1.5 rounded-bl-xl border-b border-l border-primary/30">
+                    <i class="fa-solid fa-spinner fa-spin mr-1"></i> In Progress
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="text-primary text-5xl md:text-6xl bg-dark p-8 rounded-2xl border border-slate-800 shrink-0 flex items-center justify-center">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-white mb-2 pr-20">Project ARK — Self-Hosted Backend Platform</h3>
+                        <p class="text-sm font-medium text-primary mb-4">Private Cloud / Internal Developer Platform</p>
+                        <p class="text-slate-300 leading-relaxed mb-6">
+                            개인 서비스를 <strong class="text-white">직접 개발·배포·운영하기 위해 구축한 Ubuntu Server 기반 Self-Hosted Backend Platform</strong>입니다.
+                            Spring Boot 서비스, PostgreSQL, Docker, Nginx를 실제 운영하고 있으며 GitLab Self-Managed와 Runner, Container Registry를 이용해
+                            <strong class="text-white">테스트부터 배포·Health Check·자동 Rollback까지 이어지는 CI/CD 흐름</strong>을 구성했습니다.
+                            단순 구축에 그치지 않고 네트워크·Reverse Proxy·Storage 장애를 직접 추적하고 복구하며 운영 경험을 축적하고 있습니다.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-dark/50 p-4 rounded-xl border border-slate-800">
+                                <h4 class="text-primary font-bold mb-2"><i class="fa-solid fa-code-branch mr-2"></i>Deployment</h4>
+                                <p class="text-sm text-slate-400 leading-relaxed">GitLab CI → Runner → Registry → Commit SHA Image → Deploy → Health Check → Rollback</p>
+                            </div>
+                            <div class="bg-dark/50 p-4 rounded-xl border border-slate-800">
+                                <h4 class="text-primary font-bold mb-2"><i class="fa-solid fa-cubes mr-2"></i>Services</h4>
+                                <p class="text-sm text-slate-400 leading-relaxed">Kakao Bot, Gateway, PostgreSQL, Nginx를 Docker 기반 Service로 분리 운영</p>
+                            </div>
+                            <div class="bg-dark/50 p-4 rounded-xl border border-slate-800">
+                                <h4 class="text-primary font-bold mb-2"><i class="fa-solid fa-screwdriver-wrench mr-2"></i>Operations</h4>
+                                <p class="text-sm text-slate-400 leading-relaxed">Docker Network, Nginx upstream, Storage Mount 장애 분석·복구 및 문서화</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="bg-primary/10 text-primary px-3 py-1 text-sm rounded-md border border-primary/30 font-medium">Ubuntu Server 24.04</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Spring Boot</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">PostgreSQL 17</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Docker</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Nginx</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">GitLab EE</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">GitLab Runner</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Container Registry</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">CI/CD</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-md border border-slate-700">Cloudflare</span>
+                        </div>
+
+                        <button onclick="openModal('ark')" class="text-sm text-primary hover:text-emerald-400 font-bold flex items-center gap-2 transition-colors print:hidden">
+                            구축 과정 자세히 보기 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <div class="print-only mt-5 pt-5 border-t border-slate-200 space-y-4 text-sm">
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">💡 프로젝트 배경</h5>
+                                <p>개인 백엔드 서비스를 실제 운영 환경까지 연결해보기 위해 시작한 장기 프로젝트입니다. 애플리케이션 코드만 구현하는 데서 끝내지 않고 서비스가 배포되고 장애가 발생했을 때 원인을 추적하고 복구할 수 있는 운영 기반까지 직접 구성하는 것을 목표로 합니다.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">📋 주요 수행 내역</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Ubuntu Server 24.04 + Docker 기반 Self-Hosted Runtime 구축</li>
+                                    <li>Nginx Reverse Proxy / HTTPS, PostgreSQL 17, Spring Boot 서비스 운영</li>
+                                    <li>GitLab EE Self-Managed + 일반 CI Runner / Deploy Runner 분리 구성</li>
+                                    <li>GitLab Container Registry와 Commit SHA 기반 Docker Image 배포</li>
+                                    <li>공통 CI Template 기반 test → build → image → deploy 파이프라인 구성</li>
+                                    <li>배포 후 Health Check 실패 시 이전 SHA Image 자동 Rollback 검증</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-primary mb-2">🔧 트러블슈팅 및 운영 경험</h5>
+                                <p>Docker Network endpoint 불일치로 인한 DB 연결 장애, Backend는 정상인데 Public API만 502가 발생한 Nginx stale upstream, Storage 미마운트 상태에서 PostgreSQL이 Root filesystem에 신규 Cluster를 만든 장애 등을 계층별로 분석하고 복구했습니다. 장애 원인·검증 명령·복구 절차를 Runbook과 Troubleshooting 문서로 관리하고 있습니다.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -467,6 +546,12 @@
 
     <script>
         const projectData = {
+            'ark': {
+                title: 'Project ARK — Self-Hosted Backend Platform',
+                reason: '개인 백엔드 서비스를 실제 운영 환경까지 연결하기 위해 시작한 장기 프로젝트입니다. 애플리케이션 개발에서 끝내지 않고 배포, 데이터베이스, Reverse Proxy, CI/CD, Health Check, Rollback, 장애 복구까지 직접 구성하며 운영 가능한 백엔드 시스템 전체 흐름을 학습·검증하고 있습니다.',
+                process: '• Ubuntu Server 24.04 + Docker 기반 Self-Hosted Runtime 구축<br>• Nginx Reverse Proxy / HTTPS, PostgreSQL 17, Spring Boot 서비스 운영<br>• GitLab EE Self-Managed + 일반 CI Runner / Deploy Runner 역할 분리<br>• GitLab Container Registry와 Commit SHA 기반 Docker Image 배포<br>• 공통 CI Template 기반 test → build → image → deploy 자동화<br>• 배포 후 Health Check 및 실패 시 이전 SHA Image 자동 Rollback 검증',
+                trouble: '<strong>[Docker / DB]</strong> PostgreSQL Container가 healthy여도 Docker Network endpoint 상태 불일치로 Spring에서 DB Hostname을 해석하지 못하는 장애를 분석·복구했습니다.<br><br><strong>[Reverse Proxy]</strong> Backend Container는 정상인데 Public API만 502가 발생한 문제를 Nginx stale upstream으로 좁혀 reload로 복구하고 재발 방지 과제로 관리했습니다.<br><br><strong>[Storage]</strong> Data HDD 미마운트 상태에서 PostgreSQL이 Root filesystem에 신규 Cluster를 생성한 장애를 경험하고 Storage Mount Guard의 필요성을 도출했습니다.'
+            },
             'project1': {
                 title: '대규모 서비스 리빌딩 및 레거시 프레임워크 현대화',
                 reason: '기존 계열사(뷰티, IT)의 웹 서비스가 노후화된 Classic ASP로 구동되고 있어 개발자 간 동시 작업이 불가하고 확장에 한계가 있었습니다. 이를 해결하기 위해 MVC 패턴을 강제하는 CodeIgniter(PHP) 기반으로 아키텍처 전면 개편을 진행했습니다.',

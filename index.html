@@ -146,6 +146,54 @@
             }
 
             .print-contact { display: flex !important; }
+
+            /* 제출용 PDF 페이지 흐름 최적화 */
+            .work-header {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+            .work-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            #control-center {
+                break-before: page;
+                page-break-before: always;
+            }
+            #control-center > .flex {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            #education {
+                padding-top: 0.6rem !important;
+                padding-bottom: 0.4rem !important;
+            }
+            #education > .grid {
+                display: grid !important;
+                grid-template-columns: 1.15fr 0.85fr !important;
+                gap: 0.6rem !important;
+                align-items: start !important;
+            }
+            #education h2 {
+                font-size: 12.5pt !important;
+                margin-bottom: 0.45rem !important;
+            }
+            #education .space-y-5 > :not([hidden]) ~ :not([hidden]) {
+                margin-top: 0.35rem !important;
+            }
+            #education .bg-card {
+                padding: 0.65rem 0.8rem !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            #education h3 { font-size: 10.2pt !important; }
+            #education p,
+            #education span { font-size: 8.7pt !important; }
+            footer { padding: 0.45rem 0 !important; }
+            footer p { margin: 0 !important; font-size: 8pt !important; }
+
             .screen-only { display: none !important; }
         }
     </style>
@@ -241,18 +289,20 @@
 
         <div class="relative border-l-2 border-slate-800 ml-3 md:ml-0 pl-6 md:pl-8">
             <div class="relative">
-                <div class="absolute -left-[35px] md:-left-[41px] top-1 h-5 w-5 rounded-full border-4 border-dark bg-primary"></div>
-                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-2">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white">메가커리어랩</h3>
-                        <p class="text-primary font-bold mt-1">기반서비스팀 · 주임 / 백엔드 개발</p>
+                <div class="work-header">
+                    <div class="absolute -left-[35px] md:-left-[41px] top-1 h-5 w-5 rounded-full border-4 border-dark bg-primary"></div>
+                    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">메가커리어랩</h3>
+                            <p class="text-primary font-bold mt-1">기반서비스팀 · 주임 / 백엔드 개발</p>
+                        </div>
+                        <span class="text-slate-500 font-medium">2023.12 ~ 현재</span>
                     </div>
-                    <span class="text-slate-500 font-medium">2023.12 ~ 현재</span>
+                    <p class="mt-5 text-slate-400 max-w-4xl">PHP/CodeIgniter와 Classic ASP 기반의 사내 시스템을 운영·개선하며 시스템 전환, 데이터베이스 환경 변경, 외부 API 연동 및 업무 자동화를 담당했습니다.</p>
                 </div>
-                <p class="mt-5 text-slate-400 max-w-4xl">PHP/CodeIgniter와 Classic ASP 기반의 사내 시스템을 운영·개선하며 시스템 전환, 데이터베이스 환경 변경, 외부 API 연동 및 업무 자동화를 담당했습니다.</p>
 
                 <div class="mt-8 space-y-6">
-                                        <article class="project-card bg-card p-6 rounded-xl border border-slate-700/50 hover:border-slate-500 transition-all" id="work-api">
+                                        <article class="project-card work-card bg-card p-6 rounded-xl border border-slate-700/50 hover:border-slate-500 transition-all" id="work-api">
                         <span class="text-xs font-bold text-primary tracking-widest">API / AUTOMATION</span>
                         <h4 class="text-xl font-bold text-white mt-1 mb-4">Meta / Google API 기반 마케팅 데이터 자동화</h4>
                         <ul class="list-disc list-inside space-y-2 text-slate-400">
@@ -266,7 +316,7 @@
                         <div class="print-only mt-5 pt-5 border-t border-slate-200 text-sm" data-print-detail="workApi"></div>
                     </article>
 
-                    <article class="project-card bg-card p-6 rounded-xl border border-slate-700/50 hover:border-slate-500 transition-all" id="work-cicd">
+                    <article class="project-card work-card bg-card p-6 rounded-xl border border-slate-700/50 hover:border-slate-500 transition-all" id="work-cicd">
                         <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
                             <div>
                                 <span class="text-xs font-bold text-primary tracking-widest">DELIVERY</span>
@@ -284,7 +334,7 @@
                         <div class="print-only mt-5 pt-5 border-t border-slate-200 text-sm" data-print-detail="workCicd"></div>
                     </article>
 
-                    <article class="project-card bg-card p-6 rounded-xl border border-slate-700/50 hover:border-slate-500 transition-all" id="work-legacy">
+                    <article class="project-card work-card bg-card p-6 rounded-xl border border-slate-700/50 hover:border-slate-500 transition-all" id="work-legacy">
                         <span class="text-xs font-bold text-primary tracking-widest">LEGACY</span>
                         <h4 class="text-xl font-bold text-white mt-1 mb-3">Classic ASP → PHP CodeIgniter 시스템 전환</h4>
                         <p class="text-slate-300 mb-4">5인 개발팀의 백엔드 담당으로 Classic ASP 기반 계열사 시스템을 PHP CodeIgniter MVC 구조로 전환하는 작업에 참여했습니다.</p>
@@ -298,7 +348,7 @@
                         <div class="print-only mt-5 pt-5 border-t border-slate-200 text-sm" data-print-detail="workLegacy"></div>
                     </article>
 
-                    <article class="project-card bg-card p-6 rounded-xl border border-slate-700/50 hover:border-slate-500 transition-all" id="work-auth">
+                    <article class="project-card work-card bg-card p-6 rounded-xl border border-slate-700/50 hover:border-slate-500 transition-all" id="work-auth">
                         <span class="text-xs font-bold text-primary tracking-widest">AUTH / MAINTAINABILITY</span>
                         <h4 class="text-xl font-bold text-white mt-1 mb-4">OAuth 인증 공통화 및 레거시 입력값 검증 로직 정리</h4>
                         <ul class="list-disc list-inside space-y-2 text-slate-400">
@@ -312,7 +362,7 @@
                         <div class="print-only mt-5 pt-5 border-t border-slate-200 text-sm" data-print-detail="workAuth"></div>
                     </article>
 
-                    <article class="project-card bg-dark/50 p-6 rounded-xl border border-slate-800 border-dashed">
+                    <article class="project-card work-card bg-dark/50 p-6 rounded-xl border border-slate-800 border-dashed">
                         <span class="text-xs font-bold text-primary tracking-widest">OPERATIONS</span>
                         <h4 class="text-lg font-bold text-white mt-1 mb-3">사내 서비스 운영 및 기능 개발</h4>
                         <p class="text-slate-400">사내 Backoffice와 Intranet을 유지보수하고, 30건 이상의 마케팅 프로모션 페이지 개발 및 Website Renewal, 외부 API 연동과 운영 중 발생하는 데이터·기능 이슈 대응을 수행했습니다.</p>
@@ -446,7 +496,7 @@
     </section>
 
     <section id="education" class="section-padding max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-10">
+        <div class="grid lg:grid-cols-2 gap-10 education-grid">
             <div>
                 <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-3">
                     <i class="fa-solid fa-graduation-cap text-primary"></i> Education & Training

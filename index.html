@@ -189,9 +189,20 @@
                 break-before: page;
                 page-break-before: always;
             }
+            /* Chrome 인쇄 시 카드 헤더만 앞 페이지에 남는 orphan split 방지 */
+            #work-legacy,
+            #ark,
             #control-center {
-                break-inside: avoid;
-                page-break-inside: avoid;
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
+            }
+
+            /* 카드 첫 라벨/헤더는 본문과 함께 이동 */
+            #work-legacy > span,
+            #work-legacy > h4,
+            #ark > .flex > div:first-child > div:first-child {
+                break-after: avoid !important;
+                page-break-after: avoid !important;
             }
             #control-center > .flex {
                 break-inside: avoid;

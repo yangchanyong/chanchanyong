@@ -127,10 +127,26 @@
                 page-break-inside: avoid;
                 break-inside: avoid;
             }
+            .print-detail-summary {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 0.75rem !important;
+                align-items: start !important;
+            }
+            .print-detail-summary h5 {
+                margin-bottom: 0.25rem !important;
+                font-size: 9pt !important;
+            }
+            .print-detail-summary p {
+                font-size: 8.7pt !important;
+                line-height: 1.42 !important;
+            }
             h1, h2, h3, h4, h5 { page-break-after: avoid; break-after: avoid; }
 
-            .section-padding { padding: 1.2rem 0 !important; }
-            section { padding-top: 0.8rem !important; padding-bottom: 0.8rem !important; }
+            .section-padding { padding: 0.9rem 0 !important; }
+            section { padding-top: 0.6rem !important; padding-bottom: 0.6rem !important; }
+            #experience .mt-8 { margin-top: 1rem !important; }
+            #experience .space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.75rem !important; }
 
             a { color: inherit !important; text-decoration: none !important; }
             .print-only { display: block !important; }
@@ -155,16 +171,54 @@
                 page-break-after: avoid;
             }
             .work-card {
-                break-inside: avoid;
-                page-break-inside: avoid;
+                break-inside: auto;
+                page-break-inside: auto;
+                padding: 0.85rem 1rem !important;
             }
-            #control-center {
+            .work-card h4,
+            .work-card > span,
+            .work-card > div:first-child {
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+            .work-card .print-only {
+                margin-top: 0.65rem !important;
+                padding-top: 0.65rem !important;
+            }
+            #projects {
                 break-before: page;
                 page-break-before: always;
+            }
+            #control-center {
+                break-inside: avoid;
+                page-break-inside: avoid;
             }
             #control-center > .flex {
                 break-inside: avoid;
                 page-break-inside: avoid;
+            }
+
+            #projects .project-card {
+                padding: 1rem !important;
+            }
+            #projects .project-card > .flex {
+                gap: 1rem !important;
+            }
+            #projects .project-card .text-5xl {
+                font-size: 2rem !important;
+            }
+            #projects .project-card .p-7 {
+                padding: 1rem !important;
+            }
+            #projects .project-card h3 {
+                margin-bottom: 0.15rem !important;
+            }
+            #projects .project-card ul {
+                margin-top: 0.35rem !important;
+            }
+            #projects .project-card .print-only {
+                margin-top: 0.65rem !important;
+                padding-top: 0.65rem !important;
             }
             #education {
                 padding-top: 0.6rem !important;
@@ -184,15 +238,14 @@
                 margin-top: 0.35rem !important;
             }
             #education .bg-card {
-                padding: 0.65rem 0.8rem !important;
+                padding: 0.5rem 0.7rem !important;
                 break-inside: avoid;
                 page-break-inside: avoid;
             }
             #education h3 { font-size: 10.2pt !important; }
             #education p,
             #education span { font-size: 8.7pt !important; }
-            footer { padding: 0.45rem 0 !important; }
-            footer p { margin: 0 !important; font-size: 8pt !important; }
+            footer { display: none !important; }
 
             .screen-only { display: none !important; }
         }

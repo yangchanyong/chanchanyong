@@ -733,7 +733,7 @@
                 title: 'ARK Control Center — Spring 기반 운영 관리 서비스',
                 reason: 'ARK의 Kakao Service 운영 기능을 Web UI에서 관리하기 위해 별도의 Spring 기반 관리 서비스를 구축했습니다. 외부에 직접 노출되는 관리 기능과 내부 Management API의 접근 경계를 나누는 데 중점을 뒀습니다.',
                 process: '• Spring Security Session Authentication<br>• SUPER_ADMIN 초기 관리자 계정 bootstrap<br>• TOTP 2FA 및 Recovery Code<br>• CSRF 방어 및 Rate Limit<br>• Kakao Command / Room 관리 API와 UI<br>• Public Admin API 직접 접근 차단 및 내부 API Key 기반 Service-to-Service 인증<br>• PostgreSQL / Flyway 기반 운영 DB Migration',
-                trouble: 'BFF → 내부 Management API → DB → 실제 KakaoTalk 응답까지 Production E2E를 검증했습니다. 운영 중 PostgreSQL Password의 $ 문자가 Docker Compose .env interpolation으로 변형되어 인증에 실패한 문제를 분리 진단하고, escape 및 Container recreate로 해결했습니다.'
+                trouble: 'BFF → 내부 Management API → DB → 실제 KakaoTalk 응답까지 Production E2E를 검증했습니다. 운영 중 PostgreSQL Password의 특수문자가 Docker Compose .env interpolation(변수 치환)으로 변형되어 인증에 실패한 문제를 분리 진단하고, escape 및 Container recreate로 해결했습니다.'
             },
             arkMcp: {
                 title: 'ARK MCP Server — AI와 자체 서버를 잇는 MCP 서버',

@@ -44,7 +44,9 @@
         .project-card { scroll-margin-top: 96px; }
 
         @media print {
-            @page { margin: 1.2cm; size: A4; }
+            /* 인쇄 대화상자의 여백 설정(기본값/없음)과 무관하게 같은 결과가 나오도록
+               페이지 여백은 0으로 두고, 본문 여백은 모든 페이지에 반복되는 body padding으로 준다 */
+            @page { margin: 0; size: A4; }
 
             *, *::before, *::after {
                 -webkit-print-color-adjust: exact !important;
@@ -58,6 +60,11 @@
                 color: #1e293b !important;
                 font-size: 10pt;
                 line-height: 1.48;
+            }
+            body {
+                padding: 12mm 13mm !important;
+                -webkit-box-decoration-break: clone;
+                box-decoration-break: clone;
             }
 
             header,
@@ -173,9 +180,10 @@
                 break-after: avoid;
                 page-break-after: avoid;
             }
+            /* 카드 라벨만 앞 페이지에 남고 빈 상자가 생기지 않도록 카드 단위로 넘긴다 */
             .work-card {
-                break-inside: auto;
-                page-break-inside: auto;
+                break-inside: avoid;
+                page-break-inside: avoid;
                 padding: 0.85rem 1rem !important;
             }
             .work-card h4,
